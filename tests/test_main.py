@@ -4,6 +4,7 @@ from fastapi_testing.main import app
 
 client = TestClient(app)
 
+
 def test_read_item():
     response = client.get("/items/?skip=0&limit=2")
     assert response.status_code ==200
